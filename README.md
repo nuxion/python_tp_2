@@ -6,7 +6,7 @@ Integrantes:
 	    Aparicio Tasaky, Pablo (desconectado)
 
 Trabajo pracitco acerca de:
-			    La La ruina del apostador (Gambler's Ruin)
+			    La ruina del apostador (Gambler's Ruin)
 
 Explicacion de cada archivo:
 
