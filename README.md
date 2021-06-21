@@ -1,7 +1,7 @@
 # python_tp_2
 
 Integrantes:
-	    Domínguez Tomás Ignacio -
+	    Domínguez, Tomás Ignacio -
 	    Bárbara, Suarez -
 	    Aparicio Tasaky, Pablo (desconectado)
 
