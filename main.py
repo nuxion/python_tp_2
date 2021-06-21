@@ -33,23 +33,23 @@ fichas = 50
 probabilidad = 0.4
 cant_maxima = 300
 
-def simulador_apuestas (Fich , Prob, C_Max):
+def simulador_apuestas (Fichas , Prob, C_Max):
 	fichas_final = 0
-	fichas_final += Fich		
+	fichas_final += Fichas		
 	cant_apuestas = 0
 	while cant_apuestas < C_Max and fichas_final > 0:
 		a = random.randint (1,10)
-		print (a)		
+		#print (a)		
 		if a > (10 - Prob*10):			
 			fichas_final += 1
-			print (fichas_final)
+			#print (fichas_final)
 			cant_apuestas += 1
-			print (cant_apuestas)
+			#print (cant_apuestas)
 		else:
 			fichas_final -= 1
-			print (fichas_final)
+			#print (fichas_final)
 			cant_apuestas += 1
-			print (cant_apuestas)
+			#print (cant_apuestas)
 
 	return fichas_final , cant_apuestas
 
@@ -57,6 +57,6 @@ prueba = simulador_apuestas (fichas, probabilidad, cant_maxima)
 print (prueba)
 
 fin = time.time()
-tiempo_total = fin-comienzo
+tiempo_total = (fin - comienzo) * 1000
 
-print ("El tiempo de ejecucion del programa fue: %.2f segundos" %tiempo_total)
+print ("El tiempo de ejecucion del programa fue: %.2f milisegundos" %tiempo_total)
