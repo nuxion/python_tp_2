@@ -54,4 +54,4 @@ print (prueba)
 fin = time.time()
 tiempo_total = (fin - comienzo) * 1000
 
-print ("El tiempo de ejecucion del programa fue: %.2f milisegundos" %tiempo_total)
+print ("El tiempo de ejecucion del programa fue: %.4f milisegundos" %tiempo_total)
