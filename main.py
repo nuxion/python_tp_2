@@ -38,18 +38,13 @@ def simulador_apuestas (Fichas , Prob, C_Max):
 	fichas_final += Fichas		
 	cant_apuestas = 0
 	while cant_apuestas < C_Max and fichas_final > 0:
-		a = random.randint (1,10)
-		#print (a)		
+		a = random.randint (1,10)				
 		if a > (10 - Prob*10):			
-			fichas_final += 1
-			#print (fichas_final)
-			cant_apuestas += 1
-			#print (cant_apuestas)
+			fichas_final += 1			
+			cant_apuestas += 1			
 		else:
-			fichas_final -= 1
-			#print (fichas_final)
-			cant_apuestas += 1
-			#print (cant_apuestas)
+			fichas_final -= 1			
+			cant_apuestas += 1			
 
 	return fichas_final , cant_apuestas
 
