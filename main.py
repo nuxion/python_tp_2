@@ -33,38 +33,42 @@ fichas = 50
 probabilidad = 0.4
 cant_maxima = 300
 
-def simulador_apuestas (Fichas , Prob, C_Max):
-	fichas_final = 0
-	fichas_final += Fichas		
-	cant_apuestas = 0
-	while cant_apuestas < C_Max and fichas_final > 0:
-		a = random.randint (1,10)				
-		if a > (10 - Prob*10):			
-			fichas_final += 1			
-			cant_apuestas += 1			
-		else:
-			fichas_final -= 1			
-			cant_apuestas += 1			
-	return fichas_final, cant_apuestas
+
+def simulador_apuestas(Fichas, Prob, C_Max):
+    fichas_final = 0
+    fichas_final += Fichas
+    cant_apuestas = 0
+    while cant_apuestas < C_Max and fichas_final > 0:
+        a = random.randint(1, 10)
+        if a > (10 - Prob*10):
+            fichas_final += 1
+            cant_apuestas += 1
+        else:
+            fichas_final -= 1
+            cant_apuestas += 1
+    return fichas_final, cant_apuestas
 
 
-prueba = simulador_apuestas (fichas, probabilidad, cant_maxima )
+prueba = simulador_apuestas(fichas, probabilidad, cant_maxima)
 print(f"Cantidad de fichas al final de la noche es: {prueba [0]}")
-print (f"La cantidad de apuestas antes de perder todas las fichas fue de: {prueba[1]}")
+print(
+    f"La cantidad de apuestas antes de perder todas las fichas fue de: {prueba[1]}")
 #print (prueba)
 
-def simulador_prom (Fichas, Prob, C_Max):
-	cont = 20
-	total_apuestas = 0
-	for i in range (cont):
-		prueba = simulador_apuestas (Fichas, Prob, C_Max)
-		total_apuestas +=prueba[1]
-		#print (total_apuestas)
 
-	return print('El promedio total de apuestas es:',round (total_apuestas/20))
+def simulador_prom(Fichas, Prob, C_Max):
+    cont = 20
+    total_apuestas = 0
+    for i in range(cont):
+        prueba = simulador_apuestas(Fichas, Prob, C_Max)
+        total_apuestas += prueba[1]
+        #print (total_apuestas)
+
+    return print('El promedio total de apuestas es:', round(total_apuestas/20))
+
 
 simulador_prom(fichas, probabilidad, cant_maxima)
 
 fin = time.time()
 tiempo_total = (fin - comienzo) * 1000
-print ("El tiempo de ejecucion del programa fue: %.4f milisegundos" %tiempo_total)
+print("El tiempo de ejecucion del programa fue: %.4f milisegundos" % tiempo_total)
