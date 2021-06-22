@@ -49,21 +49,22 @@ def simulador_apuestas (Fichas , Prob, C_Max):
 
 
 prueba = simulador_apuestas (fichas, probabilidad, cant_maxima )
-print(prueba[1])
+print(f"Cantidad de fichas al final de la noche es: {prueba [0]}")
+print (f"La cantidad de apuestas antes de perder todas las fichas fue de: {prueba[1]}")
 #print (prueba)
-def simulador_prom(Fichas , Prob, C_Max):
-        cont = 20
-        total_apuestas=0
-        for i in range(cont):
-     	    prueba = simulador_apuestas (Fichas,Prob, C_Max)
-    	    #fichas_final = prueba[0]       ########################Con lo comentado me salta error tambien
-		    #cant_apuestas= prueba[1]
-            total_apuestas+=prueba[1]
-            #print('Cantidad restante de fichas: ', fichas_final,'Cantidad de apuestas realizadas: ', cant_apuestas)
-        return print('El promedio total de apuestas es: ',total_apuestas/20)
+
+def simulador_prom (Fichas, Prob, C_Max):
+	cont = 20
+	total_apuestas = 0
+	for i in range (cont):
+		prueba = simulador_apuestas (Fichas, Prob, C_Max)
+		total_apuestas +=prueba[1]
+		#print (total_apuestas)
+
+	return print('El promedio total de apuestas es:',round (total_apuestas/20))
+
+simulador_prom(fichas, probabilidad, cant_maxima)
 
 fin = time.time()
 tiempo_total = (fin - comienzo) * 1000
-
 print ("El tiempo de ejecucion del programa fue: %.4f milisegundos" %tiempo_total)
-simulador_prom(fichas, probabilidad, cant_maxima)
